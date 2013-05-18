@@ -1,0 +1,34 @@
+#N canvas 0 48 958 1150 10;
+#X obj 41 105 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 40 40 import labjack;
+#X text 140 41 need to import labjack;
+#X text 177 107 Triggers a measurement;
+#X obj 158 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 41 293 5 0 0 0 - - -;
+#X floatatom 57 270 5 0 0 0 - - -;
+#X floatatom 74 246 5 0 0 0 - - -;
+#X text 182 272 First outlets Outputs Analog Input Values;
+#X text 178 174 Last outlet bangs on Error;
+#X obj 41 144 LJ_InputSample 0 1 2;
+#X text 178 141 LJ_InputSample takes as parameters a list of analog
+inputs to acquire;
+#X obj 91 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 107 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 124 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 141 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 180 209 IO0 to IO3 values;
+#X connect 0 0 10 0;
+#X connect 10 0 5 0;
+#X connect 10 1 6 0;
+#X connect 10 2 7 0;
+#X connect 10 3 12 0;
+#X connect 10 4 13 0;
+#X connect 10 5 14 0;
+#X connect 10 6 15 0;
+#X connect 10 7 4 0;

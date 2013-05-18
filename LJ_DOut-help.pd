@@ -1,0 +1,22 @@
+#N canvas 0 48 958 1150 10;
+#X obj 49 37 import labjack;
+#X text 146 38 need to import labjack;
+#X text 202 135 Send values to labjack;
+#X obj 62 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 93 172 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 125 193 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 202 210 ...;
+#X obj 62 225 LJ_DOut 0 1;
+#X text 199 171 Set first port (here D0);
+#X text 198 191 Set second port (here IO1);
+#X text 199 228 Parameters initialize which D ports are managed by
+Pd ports;
+#X text 49 98 LJ_DOut set values of the D digital ports;
+#X text 66 279 Direction of the port must be set using;
+#X obj 321 277 LJ_TrisD;
+#X connect 3 0 7 0;
+#X connect 4 0 7 1;
+#X connect 5 0 7 2;

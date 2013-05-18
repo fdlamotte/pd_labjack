@@ -1,0 +1,22 @@
+#N canvas 0 0 958 1093 10;
+#X declare -lib labjack;
+#X obj 41 105 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 40 40 import labjack;
+#X text 145 39 need to import labjack;
+#X text 177 107 Triggers a measurement;
+#X text 178 141 LJ_AISample takes as parameters a list of inputs to
+acquire;
+#X obj 140 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 41 235 5 0 0 0 - - -;
+#X floatatom 74 216 5 0 0 0 - - -;
+#X floatatom 107 198 5 0 0 0 - - -;
+#X text 180 226 First outlets Outputs Analog Input Values;
+#X text 178 174 Last outlet bangs on Error;
+#X obj 41 144 LJ_AISample 0 1 2;
+#X connect 0 0 11 0;
+#X connect 11 0 6 0;
+#X connect 11 1 7 0;
+#X connect 11 2 8 0;
+#X connect 11 3 5 0;

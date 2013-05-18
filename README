@@ -1,0 +1,8 @@
+This is an external for PureData to handle Labjack U12 cards.
+
+On linux, providing you have PD and labjack libraries installed it should compile using make. On windows it compiles using Mingw32.
+
+See :
+ - http://puredata.info/ for more information about PureData
+ - http://labjack.com/ for more information about LabJack boards
+ - the example pd files on how to use the objects

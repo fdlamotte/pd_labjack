@@ -1,0 +1,22 @@
+#N canvas 0 48 958 1150 10;
+#X obj 49 37 import labjack;
+#X text 146 38 need to import labjack;
+#X text 202 135 Send values to labjack;
+#X obj 62 225 LJ_IOOut 0 1;
+#X obj 62 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 96 173 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 131 194 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 199 171 Set first IO (here IO0);
+#X text 198 191 Set second IO (here IO1);
+#X text 202 210 ...;
+#X text 199 228 Parameters initialize which IO ports are managed by
+Pd ports;
+#X text 49 98 LJ_IOOut set values of the IO digital ports;
+#X obj 304 290 LJ_TrisIO;
+#X text 60 290 Direction of the port must be set using;
+#X connect 4 0 3 0;
+#X connect 5 0 3 1;
+#X connect 6 0 3 2;
